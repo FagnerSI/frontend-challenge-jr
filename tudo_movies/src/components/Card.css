@@ -1,0 +1,128 @@
+
+.card {
+    display: inline-block;
+    position: relative;
+    height: 250px;
+    width: 385px;
+    box-sizing: border-box;
+    margin: 10px;   
+    border-radius: 10px;
+    box-shadow: 0px 5px 35px rgba(109, 109, 109, 0.7);
+}
+
+.card .img-back{
+    height: 200px;
+    width: 385px;
+    border-radius: 10px 10px 0 0;
+}
+
+.card .img-min {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    height: 120px;
+    width: 85px;
+    z-index: 10;
+}
+
+.card-body {    
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+    height: 130px;
+    width: 385px;
+    padding: 50px 10px 10px 10px;
+    border-radius: 0px 0px 10px 10px;
+    background-image: linear-gradient(to bottom, #ffffff13, #ffffff 30%);
+}
+
+.card-body .movie-title {
+    font-size: 16px;   
+    color: rgb(204, 26, 115);
+}
+
+.card-body .movie-desc {
+    overflow: auto;
+    max-width: 290px;
+    max-height: 25px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #777;
+}
+
+.card-body .movie-date {
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #777;
+}
+
+.card-body .movie-rating {
+    font-size: 28px;
+    border-radius: 50%;
+    padding: 10px 8px;
+}
+
+.ranger-green {
+    color: rgb(101, 141, 26);
+    border: solid 0.8px rgb(77, 107, 20);
+}
+
+.ranger-orange {
+    color:rgb(255, 166, 0);
+    border: solid 0.8px  rgb(255, 166, 0);
+}
+
+.ranger-red {
+    color: rgb(255, 2, 2);
+    border: solid 0.8px rgb(255, 2, 2);
+}
+
+
+@media (min-width: 1450px) { 
+
+    .card {       
+        height: 350px;
+        width: 550px;       
+    }
+    
+    .card .img-back{
+        height: 300px;
+        width: 550px;        
+    }
+    
+    .card .img-min {        
+        top: 70px;       
+        height: 160px;
+        width: 120px;        
+    }
+    
+    .card-body {     
+        height: 170px;
+        width: 550px;  
+        padding-top: 60px;    
+    }
+    
+    .card-body .movie-title {
+        font-size: 20px;        
+    }
+    
+    .card-body .movie-desc { 
+        font-size: 16px;   
+        max-width: 440px; 
+        max-height: 35px;      
+    }
+    
+    .card-body .movie-date {           
+        font-size: 14px;       
+    }
+    
+    .card-body .movie-rating {
+        font-size: 34px;      
+        padding: 12px 10px;
+        margin: 15px 10px;    
+    }   
+
+
+}
