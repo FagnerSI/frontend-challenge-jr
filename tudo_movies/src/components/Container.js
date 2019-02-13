@@ -38,6 +38,7 @@ export default class Container extends Component {
     }
 
     loadData = () => {
+        
         const API_KEY = '7fa47550a2cf9a4e94701d5e5940ce12';
         let { page } = this.state;
         let { total_pages } = this.state;
@@ -71,7 +72,7 @@ export default class Container extends Component {
         let title = 'Recentes';
 
         if (search) {
-            title = total_results + ' resultados para: ' + search;
+            title = total_results + ' resultado(s) para: ' + search;
         }
         return (
             <div className="content">
