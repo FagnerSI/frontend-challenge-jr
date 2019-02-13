@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './Container.css';
-
+import '../css/Container.css';
+import Pubsub from 'pubsub-js';
 import Card from './Card'
 
 import axios from 'axios';
@@ -12,10 +12,19 @@ export default class Container extends Component {
     state = {
         movies: [],
         page: 1,
+        search: false
     }
     componentDidMount() {    
-        this.handleScroll();        
+        this.handleScroll();
         window.onscroll = () => this.handleScroll();
+    }
+
+    componentWillMount(){
+        Pubsub.subscribe('searchedMovie', (topic, movies) => {
+            this.setState({                
+                movies
+            })
+        })
     }
 
     handleScroll = (e) => {

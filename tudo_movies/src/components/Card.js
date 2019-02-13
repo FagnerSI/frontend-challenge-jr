@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Card.css';
+import '../css/Card.css';
 
 
 import axios from 'axios';
@@ -42,13 +42,13 @@ export default class Card extends Component {
     else {
       classRanger += ' ranger-red';
     }
-
+    
 
     return (
       <div className="card" >
-        <img className="img-back" src={base_url + size + movie.backdrop_path} alt="" />
+        <img className="img-back" src={base_url + size + movie.backdrop_path} alt={'Imagem do filme: '+ movie.title}/>
 
-        <img className="img-min" src={base_url + size + movie.poster_path} alt="" />
+        <img className="img-min" src={base_url + size + movie.poster_path} alt={'Poster do filme: '+ movie.title}/>
 
         <div className="card-body">
 
